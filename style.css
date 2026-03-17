@@ -3,11 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
     scroll-behavior: smooth;
 }
+
 
 :root {
     --primary-blue: #0c3b5a;
@@ -336,23 +334,25 @@ header {
 .about {
     padding: 100px 0;
     background: var(--white);
+
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
 }
 
 .about-card {
-    background: var(--white);
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: all 0.4s ease;
-    border: 2px solid transparent;
-}
+
+        background: var(--white);
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        transition: all 0.4s ease;
+        border: 2px solid transparent;
+    }
 
 .about-card:hover {
     transform: translateY(-10px);
@@ -385,6 +385,7 @@ header {
     font-size: 1.4rem;
     color: var(--primary-blue);
     margin-bottom: 15px;
+    
 }
 
 .about-card p {
@@ -392,10 +393,39 @@ header {
     font-size: 0.95rem;
 }
 
-/* ===== Programs Section ===== */
+.founder-note {
+    margin-top: 0px;
+    background: #fff5ec;
+    padding:  60px 20px;
+    border-radius: 40px;
+    display:flex;
+    justify-content: center;
+
+}
+.notes{
+background: #ffffff;
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.notes h3{
+    
+    font-size:300%;
+    max-width:200%;
+    margin-left: 8px;
+}
+.notes p{
+   margin-left: 10px;
+    font-size: 16px;
+}
+/*==== Programs Section ===== */
 .programs {
     padding: 100px 0;
     background: linear-gradient(180deg, var(--white) 0%, var(--light-blue) 100%);
+    
 }
 
 .programs-grid {
@@ -585,6 +615,7 @@ header {
     margin-bottom: 30px;
 }
 
+
 /* ===== Footer ===== */
 .footer {
     background: var(--primary-blue);
@@ -744,5 +775,428 @@ header {
     .btn {
         padding: 12px 25px;
         font-size: 1rem;
+    }
+}
+
+/* ---------- Container ---------- */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ---------- Program Details ---------- */
+/* ---------- Program Details ---------- */
+
+.program-detail {
+    background-color: #f9fafc;
+    /* soft page background */
+    padding: 80px 0;
+}
+
+/* Container becomes a card */
+
+.program-detail .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Heading */
+
+.program-detail h2 {
+    font-size: 2rem;
+    color: #0b3c5d;
+    margin-bottom: 15px;
+    font-family: 'Baloo 2', cursive;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Yellow accent line */
+
+.program-detail h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #f6b800;
+    display: block;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+/* Paragraph */
+
+.program-detail p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 720px;
+}
+
+/* List */
+
+.program-detail ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.program-detail ul li {
+    font-size: 1rem;
+    padding: 8px 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+/* Yellow bullet */
+
+.program-detail ul li::before {
+    content: "✦";
+    color: #f6b800;
+    font-size: 14px;
+    margin-right: 10px;
+}
+/* ---------- Learning Approach Section ---------- */
+
+.approach {
+    padding: 80px 0;
+    background-color: #fff7ea;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    color: #0b3c5d;
+    font-family: 'Baloo 2', cursive;
+}
+
+/* Grid */
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* Cards */
+
+.approach-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.approach-box:hover {
+    transform: translateY(-6px);
+}
+
+/* Icons */
+
+.approach-box i {
+    font-size: 35px;
+    color: #f4d8b0;
+    margin-bottom: 15px;
+}
+
+.approach-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #0b3c5d;
+}
+
+.approach-box p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ---------- CTA Section ---------- */
+
+.program-cta {
+    background: #0b3c5d;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.program-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.program-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    background-color: #f6b800;
+    color: black;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffd447;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+    padding: 80px 0;
+    background: #f7f8fc;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stars {
+    color: #f4b400;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.testimonial-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #e8ebff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: #6c7ae0;
+}
+
+.testimonial-profile h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.testimonial-profile span {
+    font-size: 12px;
+    color: #777;
+}
+
+.faq-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faq-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.faq-item h3 i {
+    background: #ffd978;
+    /* soft yellow */
+    color: #2c3e50;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+}
+
+/* admission & enquiry section*/
+.contact-section {
+    padding: 80px 0;
+    background: #f8f9fc;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info p {
+    margin: 15px 0;
+    color: #444;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--primary-blue);
+}
+
+.whatsapp-contact {
+    display: inline-block;
+    margin-top: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.contact-form button {
+    background-color: #f6b800;
+    color: var(--primary-blue);
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    background-color: #ffd447;
+}
+
+#successMessage {
+    display: none;
+    margin-top: 15px;
+    color: green;
+    font-weight: 500;
+}
+
+/* mobile responsive*/
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Section spacing */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* Titles */
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* About / Programs / Cards */
+    .about-grid,
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Founder box */
+    .founder-box {
+        padding: 25px;
+    }
+
+    /* FAQ */
+    .faq-item h3 {
+        font-size: 1rem;
+        flex-direction: row;
+    }
+
+    .faq-item h3 i {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+/* tab responive*/
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .about-grid,
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
