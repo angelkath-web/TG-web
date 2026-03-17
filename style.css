@@ -1093,6 +1093,33 @@ background: #ffffff;
     text-decoration: none;
 }
 
+.form-status {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    text-align: center;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+/* Success style */
+.form-status.success {
+    background: #e6f9f0;
+    color: #2e7d5b;
+    border: 1px solid #b2f2d7;
+    display: block;
+    box-shadow: 0 5px 15px rgba(46, 125, 91, 0.2);
+}
+
+/* Error style */
+.form-status.error {
+    background: #fdecea;
+    color: #c0392b;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
 .contact-form {
     background: white;
     padding: 30px;
