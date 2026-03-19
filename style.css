@@ -1197,16 +1197,17 @@ background: #ffffff;
         height: 60px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        background: var(--primary-blue);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: none;
-        padding: 15px 0;
-    }
+.nav-links {
+    flex-direction: column;
+    width: 100%;
+    background: var(--primary-blue);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding: 15px 0;
+    z-index: 999;
+}
 
     .nav-links.active {
         display: flex;
