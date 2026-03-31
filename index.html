@@ -29,6 +29,10 @@
         </nav>
     </header> -->
     <header>
+        <!-- CURSOR -->
+        <div class="tg-cursor" id="tgCursor"></div>
+        <div class="tg-cursor-ring" id="tgCursorRing"></div>
+
         <nav class="navbar">
     
             <img src="TG logo.jpeg" class="logo" alt="Tiny Gliders Logo">
@@ -267,6 +271,36 @@
     </footer>
 
 <script>
+
+    
+        /* ─── 1. CUSTOM CURSOR ───────────────── */
+        const cursor = document.getElementById('tgCursor');
+        const cursorRing = document.getElementById('tgCursorRing');
+
+        if (cursor && window.matchMedia('(hover: hover)').matches) {
+            let rx = 0, ry = 0, cx = 0, cy = 0;
+
+            window.addEventListener('mousemove', e => {
+                cx = e.clientX; cy = e.clientY;
+                cursor.style.left = cx + 'px';
+                cursor.style.top = cy + 'px';
+            });
+
+            const ringTick = () => {
+                rx += (cx - rx) * 0.1;
+                ry += (cy - ry) * 0.1;
+                cursorRing.style.left = rx + 'px';
+                cursorRing.style.top = ry + 'px';
+                requestAnimationFrame(ringTick);
+            };
+            ringTick();
+
+            document.querySelectorAll('a, button, .feat-card, .testi-card, .gal-item, .faq-q').forEach(el => {
+                el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+            });
+        }
+
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
 

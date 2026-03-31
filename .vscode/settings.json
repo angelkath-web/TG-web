@@ -1,5 +1,6 @@
 {
-    "vscode-pets.throwBallWithMouse": true,
-    "vscode-pets.theme": "beach",
-    "vscode-pets.petSize": "nano"
+  "vscode-pets.throwBallWithMouse": true,
+  "vscode-pets.theme": "beach",
+  "vscode-pets.petSize": "nano",
+  "liveServer.settings.port": 3001
 }

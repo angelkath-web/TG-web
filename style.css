@@ -20,6 +20,49 @@
     --shadow-hover: 0 8px 30px rgba(12, 59, 90, 0.2);
 }
 
+/* ─── CUSTOM CURSOR ─────────────────────── */
+.tg-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--amber);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+}
+
+.tg-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgba(244, 180, 0, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition: width .3s var(--ease), height .3s var(--ease), border-color .3s;
+}
+
+body.cursor-hover .tg-cursor-ring {
+    width: 50px;
+    height: 50px;
+    border-color: var(--amber);
+}
+
+@media (hover: none) {
+
+    .tg-cursor,
+    .tg-cursor-ring {
+        display: none;
+    }
+}
+
+
 body.bd {
     background-color: var(--white);
     color: var(--text-dark);
