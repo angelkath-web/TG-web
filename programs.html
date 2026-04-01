@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bd"class="scroll-animate">
+<body class="bd">
     <!-- ===== Header / Navbar ===== -->
 <header>
     <nav class="navbar">
@@ -206,7 +206,24 @@
     </div>
 </section>
 <script>
-    
+    document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        const elements = document.querySelectorAll(
+            "section, .program-card, .approach-box, .program-detail .container"
+        );
+
+        elements.forEach(el => observer.observe(el));
+    });
+
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
 
