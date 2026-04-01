@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="bd">
+<body class="bd"class="scroll-animate">
 
     <!-- ===== Header / Navbar ===== -->
 
@@ -127,6 +127,25 @@
 
     </section>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                        }
+                    });
+                }, {
+                    threshold: 0.2
+                });
+
+                const elements = document.querySelectorAll(
+                    "section, .about-card, .program-card, .testimonial-card"
+                );
+
+                elements.forEach(el => observer.observe(el));
+
+            });
         const form = document.getElementById('contact-form');
         const status = document.getElementById('form-status');
 
